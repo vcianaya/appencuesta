@@ -26,7 +26,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class PrincipalActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, EncuestaFragment.OnFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener, EncuestaFragment.OnFragmentInteractionListener, ListaFragment.OnFragmentInteractionListener {
     ApiService service;
     TokenManager tokenManager;
     Call<ResponseBody>call;
@@ -122,10 +122,10 @@ public class PrincipalActivity extends AppCompatActivity
             mfragment = new EncuestaFragment();
             fragmentSelected = true;
         } else if (id == R.id.nav_gallery) {
+            mfragment = new ListaFragment();
+            fragmentSelected = true;
 
         } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
 
